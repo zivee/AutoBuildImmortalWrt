@@ -1,3 +1,12 @@
+> 当前修改了 store 库，为自己fork的，方便放自定义的包文件。
+> 参考 https://github.com/wukongdaily/AutoBuildImmortalWrt/discussions/209#discussioncomment-14042338
+```
+自己fork wukongdaily/store 在run/x86 建立一个 lucky 目录，上传 3个文件 luci-app-lucky_2.2.2-r1_all.ipk luci-i18n-lucky-zh-cn_25.051.13443.e78d498_all.ipk lucky_2.15.8_Openwrt_x86_64_wanji.ipk，可以到 gdy666/luci-app-lucky 下载这3个文件，然后 在 shell/custom-packages.sh 中加入下面两行即可
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-lucky"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-lucky-zh-cn"
+由于找不到最新版本的 lucky 核心 ipk，编译是用官方的 2.15.8 版本，然后使用时可以在 release.66666.host 下载适合你机型的最新的核心文件，打开lucky 页面 更新一下就是最新版本了
+```
+
 # AutoBuildImmortalWrt
 [![GitHub](https://img.shields.io/github/license/wukongdaily/AutoBuildImmortalWrt.svg?label=LICENSE&logo=github&logoColor=%20)](https://github.com/wukongdaily/AutoBuildImmortalWrt/blob/master/LICENSE)
 ![GitHub Stars](https://img.shields.io/github/stars/wukongdaily/AutoBuildImmortalWrt.svg?style=flat&logo=appveyor&label=Stars&logo=github)
