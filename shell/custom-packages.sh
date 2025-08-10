@@ -4,7 +4,7 @@
 # istore商店
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-store"
 # 首页和网络向导
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-quickstart-zh-cn"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-quickstart-zh-cn"
 # lucky
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-lucky"
 # 去广告adghome
