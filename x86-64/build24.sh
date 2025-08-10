@@ -83,10 +83,10 @@ if echo "$PACKAGES" | grep -q "luci-app-openclash"; then
     # 备用
     wget -qO- $META_URL | tar xOvz > files/etc/openclash/core/clash_meta.no_smart
     # 下载smart功能核心，v1/v2/v3依据 cpu：https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels
-    META_URL="https://github.com/vernesong/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-v3-alpha-smart-00e7648.gz"
-    wget -qO- $META_URL | tar xOvz > files/etc/openclash/core/clash_meta
-    wget -q https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/Model-large.bin -O Model.bin
-    chmod +x files/etc/openclash/core/clash_meta*
+    SMART_URL="https://github.com/vernesong/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-v3-alpha-smart-00e7648.gz"
+    wget -qO- $SMART_URL | tar xOvz > files/etc/openclash/core/clash_meta
+    wget -q https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/Model-large.bin -O files/etc/openclash/Model.bin
+    chmod +x files/etc/openclash/core/clash_meta
     # Download GeoIP and GeoSite
     wget -q https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat -O files/etc/openclash/GeoIP.dat
     wget -q https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -O files/etc/openclash/GeoSite.dat
