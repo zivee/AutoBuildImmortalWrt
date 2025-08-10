@@ -5,4 +5,4 @@
    - 用户名 `root` 密码：无
    - WAN口：PPPOE
  - 默认软件包大小 2GB
- - 软件包差异：+lucky, +quickstart, -homeproxy, -istore, openclash+smart core
+ - 软件包差异：+lucky, +quickstart, -homeproxy, -istore -dufs -filemanager, openclash+smart core
