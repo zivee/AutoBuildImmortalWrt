@@ -88,10 +88,10 @@ jobs:
       - name: Upload ImmortWrt as release assets
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: Custombuild-x86-64
+          tag_name: Autobuild-compact-x86-64
           body_path: ${{ github.workspace }}/info.md
           files: |
-            ${{ github.workspace }}/bin/targets/x86/64/*squashfs-*.img.gz
+            ${{ github.workspace }}/bin/targets/x86/64/*.img.gz
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
