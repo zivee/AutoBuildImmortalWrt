@@ -83,8 +83,8 @@ if echo "$PACKAGES" | grep -q "luci-app-openclash"; then
     # 备用
     wget -qO- $META_URL | tar xOvz > files/etc/openclash/core/clash_meta.no_smart
     # 下载smart功能核心，v1/v2/v3依据 cpu：https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels
-    SMART_URL="https://github.com/vernesong/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-v3-alpha-smart-00e7648.gz"
-    wget -qO- $SMART_URL | tar xOvz > files/etc/openclash/core/clash_meta
+    SMART_URL="https://github.com/vernesong/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-v3-alpha-smart-7d05dcf.gz"
+    wget -qO- $SMART_URL | gunzip > files/etc/openclash/core/clash_meta
     wget -q https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/Model-large.bin -O files/etc/openclash/Model.bin
     chmod +x files/etc/openclash/core/clash_meta
     # Download GeoIP and GeoSite
